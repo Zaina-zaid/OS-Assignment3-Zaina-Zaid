@@ -135,7 +135,7 @@ class ReadyQueue {
     private final ReentrantLock lock = new ReentrantLock();
 
 
-    private final Semaphore availableProcesses=new Semaphore(0);
+    private final Semaphore availableProcesses = new Semaphore(0);
 
     // Add a process to the ready queue (new process, or a process that did not finish its quantum)
     public void add(Process process) {
@@ -204,6 +204,7 @@ class ReadyQueue {
             lock.unlock();
         }
     }
+}
 
 
     // Class representing a process (same as Assignment 1) - executes ONE time quantum per thread start
@@ -374,8 +375,6 @@ class ReadyQueue {
                 }
             }
         }
-
-
         }
 
 
@@ -510,6 +509,6 @@ class ReadyQueue {
             return good;
         }
     }
-}
+
 
 
